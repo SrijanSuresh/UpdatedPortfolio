@@ -102,10 +102,16 @@ export default function Portfolio() {
               </button>
             ))}
           </div>
-          <Button className="bg-transparent border border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10 group relative overflow-hidden">
-            <span className="relative z-10">CONNECT</span>
-            <span className="absolute inset-0 w-0 bg-[#00ffff]/20 transition-all duration-300 group-hover:w-full"></span>
-          </Button>
+            <Button asChild className="bg-transparent border border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10 group relative overflow-hidden">
+            <a
+              href="https://www.linkedin.com/in/srijan-suresh/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="relative z-10">CONNECT</span>
+              <span className="absolute inset-0 w-0 bg-[#00ffff]/20 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            </Button>
         </div>
       </nav>
 
@@ -252,7 +258,6 @@ export default function Portfolio() {
                     PROJECT_{project.toString().padStart(2, "0")}
                   </h3>
                   <p className="text-white/70 mb-4 font-mono text-sm">
-                    // A brief description of this amazing project and the technologies used to build it.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
@@ -386,7 +391,6 @@ export default function Portfolio() {
               <GlitchText>TECH ARSENAL</GlitchText>
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto relative z-10 font-mono">
-              // Technologies and tools I work with to bring ideas to life
             </p>
           </div>
 
@@ -466,7 +470,6 @@ export default function Portfolio() {
               <GlitchText>DIGITAL PROFILE</GlitchText>
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto relative z-10 font-mono">
-              // My professional journey and experience
             </p>
           </div>
 
@@ -571,7 +574,7 @@ export default function Portfolio() {
                 <GlitchText>SRIJAN_SURESH</GlitchText>
                 <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffff] to-transparent"></div>
               </div>
-              <p className="text-white/50 text-sm font-mono">© {new Date().getFullYear()} // ALL_RIGHTS_RESERVED</p>
+              <p className="text-white/50 text-sm font-mono">© {new Date().getFullYear()}</p>
             </div>
             <div className="flex gap-6">
               <Link href="https://github.com/SrijanSuresh" className="text-white/50 hover:text-[#ff00ea] transition-colors relative group">
