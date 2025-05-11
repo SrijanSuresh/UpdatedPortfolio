@@ -133,7 +133,7 @@ export default function Portfolio() {
             </Badge>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               <GlitchText className="block">SRIJAN SURESH</GlitchText>
-              <span className="text-2xl md:text-3xl block mt-2 text-[#00ffff]">// DIGITAL ARCHITECT</span>
+              <span className="text-2xl md:text-3xl block mt-2 text-[#00ffff]"></span>
             </h1>
             <div className="relative mb-8 pl-4 border-l-2 border-[#ff00ea]">
               <p className="text-xl md:text-2xl text-white/70 max-w-2xl font-mono">
@@ -150,7 +150,7 @@ export default function Portfolio() {
                 <span className="absolute inset-0 w-0 bg-[#00ffff]/30 transition-all duration-300 group-hover:w-full"></span>
               </Button>
               <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
-                DOWNLOAD PROFILE
+                <a href="./resume.pdf" download>DOWNLOAD PROFILE</a>
               </Button>
             </div>
           </motion.div>
@@ -206,7 +206,6 @@ export default function Portfolio() {
               <GlitchText>DIGITAL CREATIONS</GlitchText>
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto relative z-10 font-mono">
-              // Explore my latest work and creative solutions
             </p>
           </div>
 
@@ -214,7 +213,7 @@ export default function Portfolio() {
             {[1, 2, 3, 4, 5, 6].map((project) => (
               <Card
                 key={project}
-                className="bg-[#0a0a20]/50 backdrop-blur-sm border-[#00ffff]/20 overflow-hidden group hover:border-[#00ffff] transition-all duration-300 relative"
+                className="bg-[#won]/50 backdrop-blur-sm border-[#00ffff]/20 overflow-hidden group hover:border-[#00ffff] transition-all duration-300 relative"
               >
                 {/* Glitch overlay effect on hover */}
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogIDxmZURpc3BsYWNlbWVudE1hcCBpbj0ibm9pc2UiIHNjYWxlPSIxMCIgeENoYW5uZWxTZWxlY3Rvcj0iUiI+PC9mZURpc3BsYWNlbWVudE1hcD4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
