@@ -123,36 +123,36 @@ export default function Portfolio() {
       >
         <div className="container mx-auto px-4 z-10 relative">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl"
           >
-            <Badge className="mb-4 bg-[#ff00ea]/20 text-[#ff00ea] hover:bg-[#ff00ea]/20 border-[#ff00ea]/50">
-              SYSTEM.ONLINE
-            </Badge>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              <GlitchText className="block">SRIJAN SURESH</GlitchText>
-              <span className="text-2xl md:text-3xl block mt-2 text-[#00ffff]"></span>
-            </h1>
-            <div className="relative mb-8 pl-4 border-l-2 border-[#ff00ea]">
-              <p className="text-xl md:text-2xl text-white/70 max-w-2xl font-mono">
-                <span className="text-[#00ffff]">$</span> Creating digital experiences from the future
-                <span className="animate-pulse">_</span>
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                onClick={() => scrollToSection("projects")}
-                className="bg-[#ff00ea] hover:bg-[#ff00ea]/80 text-white relative group overflow-hidden"
-              >
-                <span className="relative z-10">EXPLORE PROJECTS</span>
-                <span className="absolute inset-0 w-0 bg-[#00ffff]/30 transition-all duration-300 group-hover:w-full"></span>
-              </Button>
-              <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
-                <a href="./resume.pdf" download>DOWNLOAD PROFILE</a>
-              </Button>
-            </div>
+        <Badge className="mb-4 bg-[#ff00ea]/20 text-[#ff00ea] hover:bg-[#ff00ea]/20 border-[#ff00ea]/50">
+          SYSTEM.ONLINE
+        </Badge>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <GlitchText className="block">SRIJAN SURESH</GlitchText>
+          <span className="text-2xl md:text-3xl block mt-2 text-[#00ffff]"></span>
+        </h1>
+        <div className="relative mb-8 pl-4 border-l-2 border-[#ff00ea]">
+          <p className="text-xl md:text-2xl text-white/70 max-w-2xl font-mono">
+            <span className="text-[#00ffff]">$</span> Creating digital experiences from the future
+            <span className="animate-pulse">_</span>
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button
+            onClick={() => scrollToSection("projects")}
+            className="bg-[#ff00ea] hover:bg-[#ff00ea]/80 text-white relative group overflow-hidden"
+          >
+            <span className="relative z-10">EXPLORE PROJECTS</span>
+            <span className="absolute inset-0 w-0 bg-[#00ffff]/30 transition-all duration-300 group-hover:w-full"></span>
+          </Button>
+          <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
+            <a href="./resume.pdf" download>DOWNLOAD PROFILE</a>
+          </Button>
+        </div>
           </motion.div>
         </div>
 
@@ -169,27 +169,32 @@ export default function Portfolio() {
 
           {/* Tech circles */}
           <div className="absolute top-1/4 right-20 w-40 h-40 rounded-full border border-[#ff00ea]/30 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full border border-[#ff00ea]/40 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full border border-[#ff00ea]/50 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-[#ff00ea]/20 animate-pulse"></div>
-              </div>
-            </div>
+        <div className="w-32 h-32 rounded-full border border-[#ff00ea]/40 flex items-center justify-center">
+          <div className="w-20 h-20 rounded-full border border-[#ff00ea]/50 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-[#ff00ea]/20 animate-pulse"></div>
+          </div>
+        </div>
           </div>
 
           <div className="absolute bottom-1/4 left-20 w-40 h-40 rounded-full border border-[#00ffff]/30 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full border border-[#00ffff]/40 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full border border-[#00ffff]/50 flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-[#00ffff]/20 animate-pulse"></div>
-              </div>
-            </div>
+        <div className="w-32 h-32 rounded-full border border-[#00ffff]/40 flex items-center justify-center">
+          <div className="w-20 h-20 rounded-full border border-[#00ffff]/50 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-[#00ffff]/20 animate-pulse"></div>
+          </div>
+        </div>
           </div>
         </div>
 
         {/* Scroll Down Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
           <span className="text-[#00ffff]/70 text-sm mb-2 font-mono">SCROLL_DOWN</span>
-          <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}>
-            <ArrowDown className="text-[#00ffff]" />
+          <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
+        onClick={() => scrollToSection("projects")}
+        className="cursor-pointer"
+          >
+        <ArrowDown className="text-[#00ffff]" />
           </motion.div>
         </div>
       </section>
@@ -287,19 +292,17 @@ export default function Portfolio() {
               <div className="space-y-4 text-white/70 font-mono relative">
                 <div className="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-[#ff00ea] via-[#00ffff] to-transparent"></div>
                 <p className="pl-4">
-                  <span className="text-[#00ffff]">{">"}</span> I am a passionate developer with a focus on creating
-                  elegant, efficient, and user-friendly solutions. With expertise in modern web technologies, I strive
-                  to build applications that not only meet but exceed expectations.
+                  <span className="text-[#00ffff]">{">"}</span> I am Srijan Suresh, a developer(prev Intern ACT) and researcher(@UIC) with a passion for building AI-driven applications, 
+                  efficient systems, and tools that make life easier and smarter. Whether it’s frontend finesse or backend logic, I’m all about crafting clean, 
+                  impactful experiences.
                 </p>
                 <p className="pl-4">
-                  <span className="text-[#00ffff]">{">"}</span> My journey in technology began with a curiosity about
-                  how things work, which evolved into a career dedicated to crafting digital experiences that make a
-                  difference. I believe in continuous learning and staying at the forefront of technological
-                  advancements.
+                  <span className="text-[#00ffff]">{">"}</span> My journey spans LLM-powered travelbots, real-time data pipelines, and kernel-level network tooling. 
+                  I’ve contributed to research at UIC, built tools with OpenAI, Firebase, and Pinecone, and even used CUDA to supercharge transportation models.
                 </p>
                 <p className="pl-4">
-                  <span className="text-[#00ffff]">{">"}</span> When I am not coding, you can find me exploring new
-                  technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+                  <span className="text-[#00ffff]">{">"}</span> Outside the code grind, you’ll find me diving into open-source, reverse-engineering systems for fun, playing chess or Replaying Elden Ring for 100th time. 
+                  I move fast, learn faster, and I’m always down to build something that pushes the edge.
                 </p>
               </div>
               <div className="mt-8 flex gap-4">
@@ -327,7 +330,7 @@ export default function Portfolio() {
               <div className="aspect-square rounded-2xl overflow-hidden border-2 border-[#00ffff]/50 relative z-10 bg-[#0a0a20]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/image/pfp3.jpeg"
                     alt="Profile"
                     width={600}
                     height={600}
@@ -393,61 +396,79 @@ export default function Portfolio() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
               {
-                name: "JavaScript",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+              name: "Python",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
               },
               {
-                name: "TypeScript",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-              },
-              { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-              {
-                name: "Next.js",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+              name: "C",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
               },
               {
-                name: "Node.js",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+              name: "Docker",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
               },
               {
-                name: "TailwindCSS",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+              name: "Redis",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
               },
-              { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-              { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
               {
-                name: "VS Code",
-                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+              name: "PostgreSQL",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
               },
-              { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-              { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-              { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+              {
+              name: "Kubernetes",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+              },
+              {
+              name: "AWS",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+              },
+              {
+              name: "Linux",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+              },
+              {
+              name: "JavaScript",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+              },
+              {
+              name: "React",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              },
+              {
+              name: "Java",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+              },
+              {
+              name: "Node.js",
+              icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+              },
             ].map((skill) => (
               <Card
-                key={skill.name}
-                className="bg-[#0a0a20]/50 backdrop-blur-sm border-[#00ffff]/20 hover:border-[#00ffff] transition-all duration-300 group relative overflow-hidden"
+              key={skill.name}
+              className="bg-[#0a0a20]/50 backdrop-blur-sm border-[#00ffff]/20 hover:border-[#00ffff] transition-all duration-300 group relative overflow-hidden"
               >
-                {/* Glitch effect on hover */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogIDxmZURpc3BsYWNlbWVudE1hcCBpbj0ibm9pc2UiIHNjYWxlPSIxMCIgeENoYW5uZWxTZWxlY3Rvcj0iUiI+PC9mZURpc3BsYWNlbWVudE1hcD4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+              {/* Glitch effect on hover */}
+              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogIDxmZURpc3BsYWNlbWVudE1hcCBpbj0ibm9pc2UiIHNjYWxlPSIxMCIgeENoYW5uZWxTZWxlY3Rvcj0iUiI+PC9mZURpc3BsYWNlbWVudE1hcD4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
 
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <div className="absolute inset-0 bg-[#ff00ea]/10 rounded-full filter blur-md group-hover:bg-[#ff00ea]/20 transition-all duration-300"></div>
-                    <Image
-                      src={skill.icon || "/placeholder.svg"}
-                      alt={skill.name}
-                      width={64}
-                      height={64}
-                      className="relative z-10 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="font-mono group-hover:text-[#00ffff] transition-colors">{skill.name}</h3>
+              <CardContent className="p-6 flex flex-col items-center text-center">
+              <div className="w-16 h-16 mb-4 relative">
+              <div className="absolute inset-0 bg-[#ff00ea]/10 rounded-full filter blur-md group-hover:bg-[#ff00ea]/20 transition-all duration-300"></div>
+              <Image
+              src={skill.icon || "/placeholder.svg"}
+              alt={skill.name}
+              width={64}
+              height={64}
+              className="relative z-10 group-hover:scale-110 transition-transform duration-300"
+              />
+              </div>
+              <h3 className="font-mono group-hover:text-[#00ffff] transition-colors">{skill.name}</h3>
 
-                  {/* Tech loading bar */}
-                  <div className="w-full h-1 bg-[#0a0a20] mt-2 overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-[#ff00ea] to-[#00ffff] w-0 group-hover:w-full transition-all duration-1000"></div>
-                  </div>
-                </CardContent>
+              {/* Tech loading bar */}
+              <div className="w-full h-1 bg-[#0a0a20] mt-2 overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-[#ff00ea] to-[#00ffff] w-0 group-hover:w-full transition-all duration-1000"></div>
+              </div>
+              </CardContent>
               </Card>
             ))}
           </div>
@@ -522,7 +543,6 @@ export default function Portfolio() {
       "institution": "UNIVERSITY_OF_ILLINOIS_CHICAGO",
       "degree": "BACHELOR_OF_SCIENCE_IN_COMPUTER_SCIENCE",
       "year": "2023 - 2025",
-      "achievements": ["DEAN'S_LIST"]
     }
   ],
   "skills": {
