@@ -5,7 +5,7 @@ import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowDown, Code, ExternalLink, Github, Mail } from "lucide-react"
+import { ArrowDown, Code, Github, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
@@ -83,7 +83,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#050510]/80 backdrop-blur-md border-b border-[#ff00ea]/20">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-xl font-bold text-white relative overflow-hidden">
-            <GlitchText>NEW GRAD 26'</GlitchText>
+            <GlitchText>NEW GRAD 26&apos;</GlitchText>
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00ffff] to-transparent"></div>
           </div>
           <div className="hidden md:flex space-x-6">
@@ -198,80 +198,77 @@ export default function Portfolio() {
       <section id="projects" ref={addToSectionRefs} className="min-h-screen py-20 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 relative">
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff00ea]/50 to-transparent -translate-y-1/2"></div>
-            <Badge className="mb-4 bg-[#00ffff]/20 text-[#00ffff] hover:bg-[#00ffff]/20 border-[#00ffff]/50 relative z-10">
-              PROJECTS.LOAD()
-            </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-4 relative z-10">
-              <GlitchText>DIGITAL CREATIONS</GlitchText>
-            </h2>
-            <p className="text-white/70 max-w-2xl mx-auto relative z-10 font-mono">
-            </p>
+        <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff00ea]/50 to-transparent -translate-y-1/2"></div>
+        <Badge className="mb-4 bg-[#00ffff]/20 text-[#00ffff] hover:bg-[#00ffff]/20 border-[#00ffff]/50 relative z-10">
+          PROJECTS.LOAD()
+        </Badge>
+        <h2 className="text-4xl md:text-6xl font-bold mb-4 relative z-10">
+          <GlitchText>DIGITAL CREATIONS</GlitchText>
+        </h2>
+        <p className="text-white/70 max-w-2xl mx-auto relative z-10 font-mono"></p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((project) => (
-              <Card
-                key={project}
-                className="bg-[#won]/50 backdrop-blur-sm border-[#00ffff]/20 overflow-hidden group hover:border-[#00ffff] transition-all duration-300 relative"
-              >
-                {/* Glitch overlay effect on hover */}
-                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogIDxmZURpc3BsYWNlbWVudE1hcCBpbj0ibm9pc2UiIHNjYWxlPSIxMCIgeENoYW5uZWxTZWxlY3Rvcj0iUiI+PC9mZURpc3BsYWNlbWVudE1hcD4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+        {[
+          { id: 1, name: "IoT Environmental Monitoring", img: "image/img1.jpg", link: "https://github.com/SrijanSuresh/IoT_Environmental_Monitoring_System" },
+          { id: 2, name: "Real-Time Lane Detection", img: "image/img22.jpg", link: "https://github.com/SrijanSuresh/LaneTrack" },
+          { id: 3, name: "3-Card Poker", img: "image/img3.jpg", link: "https://github.com/SrijanSuresh/3CardPoker" },
+          { id: 4, name: "MonteCarlo Risk Analyst", img: "image/img7.jpeg", link: "https://github.com/SrijanSuresh/MonteCarlo-Trade-Optimizer"  },
+          { id: 5, name: "Document Analyst", img: "image/img5.jpg", link: "https://github.com/SrijanSuresh/DocumentAnalyst-WebApp-" },
+          { id: 6, name: "AI-Generated FlashCards", img: "image/img4.jpg", link: "https://github.com/SrijanSuresh/FlashCard"},
+        ].map((project) => (
+          <Card
+            key={project.id}
+            className="bg-[#0a0a20]/50 backdrop-blur-sm border-[#00ffff]/20 overflow-hidden group hover:border-[#00ffff] transition-all duration-300 relative"
+          >
+            {/* Glitch overlay effect on hover */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZmlsdGVyIGlkPSJub2lzZSI+CiAgPGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogIDxmZURpc3BsYWNlbWVudE1hcCBpbj0ibm9pc2UiIHNjYWxlPSIxMCIgeENoYW5uZWxTZWxlY3Rvcj0iUiI+PC9mZURpc3BsYWNlbWVudE1hcD4KPC9maWx0ZXI+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDUiPjwvcmVjdD4KPC9zdmc+')] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none"></div>
 
-                <div className="relative aspect-video overflow-hidden border-b border-[#00ffff]/20">
-                  <Image
-                    src={`/placeholder.svg?height=300&width=600`}
-                    alt={`Project ${project}`}
-                    width={600}
-                    height={300}
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <div className="flex gap-3">
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-[#ff00ea] text-[#ff00ea] bg-black/50 backdrop-blur-sm hover:bg-[#ff00ea]/20"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        CODE
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-[#00ffff] text-[#00ffff] bg-black/50 backdrop-blur-sm hover:bg-[#00ffff]/20"
-                      >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        DEMO
-                      </Button>
-                    </div>
-                  </div>
+            <div className="relative aspect-video overflow-hidden border-b border-[#00ffff]/20">
+          <Image
+            src={`/${project.img}`}
+            alt={project.name}
+            width={600}
+            height={300}
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a20] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+            <div className="flex gap-3">
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-[#ff00ea] text-[#ff00ea] bg-black/50 backdrop-blur-sm hover:bg-[#ff00ea]/20 px-4 py-2 text-sm rounded flex items-center transition-all duration-300 pointer-events-auto"
+            >
+              CODE
+            </a>
+            </div>
+          </div>
 
-                  {/* Project number in corner */}
-                  <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm text-[#00ffff] px-2 py-1 text-xs font-mono border border-[#00ffff]/30">
-                    PROJECT_{project.toString().padStart(2, "0")}
-                  </div>
-                </div>
-                <CardContent className="p-6 relative">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#00ffff] transition-colors font-mono">
-                    PROJECT_{project.toString().padStart(2, "0")}
-                  </h3>
-                  <p className="text-white/70 mb-4 font-mono text-sm">
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
-                      React
-                    </Badge>
-                    <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
-                      Next.js
-                    </Badge>
-                    <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
-                      TypeScript
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Project number in corner */}
+          <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm text-[#00ffff] px-2 py-1 text-xs font-mono border border-[#00ffff]/30">
+            {project.name.toUpperCase()}
+          </div>
+            </div>
+            <CardContent className="p-6 relative">
+          <h3 className="text-xl font-bold mb-2 group-hover:text-[#00ffff] transition-colors font-mono">
+            {project.name}
+          </h3>
+          <p className="text-white/70 mb-4 font-mono text-sm"></p>
+          <div className="flex flex-wrap gap-2">
+            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+              React
+            </Badge>
+            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+              Next.js
+            </Badge>
+            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+              TypeScript
+            </Badge>
+          </div>
+            </CardContent>
+          </Card>
+        ))}
           </div>
         </div>
       </section>
@@ -290,7 +287,7 @@ export default function Portfolio() {
               <div className="space-y-4 text-white/70 font-mono relative">
                 <div className="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-[#ff00ea] via-[#00ffff] to-transparent"></div>
                 <p className="pl-4">
-                  <span className="text-[#00ffff]">{">"}</span> I'm a passionate developer with a focus on creating
+                  <span className="text-[#00ffff]">{">"}</span> I am a passionate developer with a focus on creating
                   elegant, efficient, and user-friendly solutions. With expertise in modern web technologies, I strive
                   to build applications that not only meet but exceed expectations.
                 </p>
@@ -301,7 +298,7 @@ export default function Portfolio() {
                   advancements.
                 </p>
                 <p className="pl-4">
-                  <span className="text-[#00ffff]">{">"}</span> When I'm not coding, you can find me exploring new
+                  <span className="text-[#00ffff]">{">"}</span> When I am not coding, you can find me exploring new
                   technologies, contributing to open-source projects, or sharing knowledge with the developer community.
                 </p>
               </div>
