@@ -260,17 +260,86 @@ export default function Portfolio() {
             {project.name}
           </h3>
           <p className="text-white/70 mb-4 font-mono text-sm"></p>
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
-              React
-            </Badge>
-            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
-              Next.js
-            </Badge>
-            <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
-              TypeScript
-            </Badge>
-          </div>
+            <div className="flex flex-wrap gap-2">
+            {project.id === 1 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Adafruit
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                C/C++
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                IoT
+              </Badge>
+              </>
+            )}
+            {project.id === 2 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                OpenCV
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                Python
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Machine Learning
+              </Badge>
+              </>
+            )}
+            {project.id === 3 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Java
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                JUnit
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                JavaFX
+              </Badge>
+              </>
+            )}
+            {project.id === 4 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Monte Carlo
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                Risk Analysis
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Python
+              </Badge>
+              </>
+            )}
+            {project.id === 5 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                NLP
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                Docker
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Python
+              </Badge>
+              </>
+            )}
+            {project.id === 6 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                AI
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                REST_API
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                JavaScript
+              </Badge>
+              </>
+            )}
+            </div>
             </CardContent>
           </Card>
         ))}
