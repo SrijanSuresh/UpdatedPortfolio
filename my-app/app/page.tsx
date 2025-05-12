@@ -150,7 +150,7 @@ export default function Portfolio() {
             <span className="absolute inset-0 w-0 bg-[#00ffff]/30 transition-all duration-300 group-hover:w-full"></span>
           </Button>
           <Button variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
-            <a href="./resume.pdf" download>DOWNLOAD PROFILE</a>
+            <a href="./Srijan_Suresh_Resume.pdf" download>DOWNLOAD PROFILE</a>
           </Button>
         </div>
           </motion.div>
@@ -320,7 +320,7 @@ export default function Portfolio() {
 
               {/* DOWNLOAD RESUME */}
               <Button asChild variant="outline" className="border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff]/10">
-                <a href="./resume.pdf" download>
+                <a href="./Srijan_Suresh_Resume.pdf" download>
                   DOWNLOAD.CV()
                 </a>
               </Button>
@@ -567,7 +567,7 @@ export default function Portfolio() {
 
             <div className="mt-8 flex justify-center">
               <Button className="bg-[#ff00ea] hover:bg-[#ff00ea]/80 text-white relative group overflow-hidden">
-                <a href="./resume.pdf" download>
+                <a href="./Srijan_Suresh_Resume.pdf" download>
                   <span className="relative z-10">DOWNLOAD.FULL_RESUME()</span>
                 </a>
                 <span className="absolute inset-0 w-0 bg-[#00ffff]/30 transition-all duration-300 group-hover:w-full"></span>
