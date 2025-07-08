@@ -221,6 +221,7 @@ export default function Portfolio() {
           { id: 4, name: "MonteCarlo Risk Analyst", img: "image/img7.jpeg", link: "https://github.com/SrijanSuresh/MonteCarlo-Trade-Optimizer"  },
           { id: 5, name: "Document Analyst", img: "image/img5.jpg", link: "https://github.com/SrijanSuresh/DocumentAnalyst-WebApp-" },
           { id: 6, name: "AI-Generated FlashCards", img: "image/img4.jpg", link: "https://github.com/SrijanSuresh/FlashCard"},
+          { id: 7, name: "Optical Character Recognition Real-Time", img: "image/img8.png", link: "https://github.com/SrijanSuresh/lang_OCR"}
         ].map((project) => (
           <Card
             key={project.id}
@@ -336,6 +337,19 @@ export default function Portfolio() {
               </Badge>
               <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
                 JavaScript
+              </Badge>
+              </>
+            )}
+            {project.id === 7 && (
+              <>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                NLP
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#00ffff]/50 text-[#00ffff]">
+                Python
+              </Badge>
+              <Badge variant="outline" className="bg-[#0a0a20]/80 border-[#ff00ea]/50 text-[#ff00ea]">
+                Computer Vision
               </Badge>
               </>
             )}
