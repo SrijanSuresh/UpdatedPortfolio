@@ -413,10 +413,10 @@ export default function Portfolio() {
               <div className="aspect-square rounded-2xl overflow-hidden border-2 border-[#00ffff]/50 relative z-10 bg-[#0a0a20]">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image
-                    src="/image/pfp3.jpeg"
+                    src="/image/pfp3.webp"
                     alt="Profile"
-                    width={600}
-                    height={600}
+                    width={500}
+                    height={500}
                     className="object-cover"
                   />
                 </div>
